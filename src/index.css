@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'ZCOOL XiaoWei', serif;
+  background-color: #f5f5f0;
+  min-height: 100vh;
+}
+
+#root {
+  padding: 20px;
+}

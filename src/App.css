@@ -1,0 +1,382 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 2px solid #8b4513;
+}
+
+.app-header h1 {
+  font-family: 'LXGW WenKai', cursive;
+  font-size: 3rem;
+  color: #8b4513;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* 控制区域 */
+.controls {
+  background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.1);
+  border: 1px solid #e8d5b7;
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #5a3e1b;
+  font-size: 1rem;
+}
+
+.control-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d4a574;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-family: 'LXGW WenKai', cursive;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.control-group textarea:focus {
+  outline: none;
+  border-color: #8b4513;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+}
+
+.preset-chars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.preset-btn {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #d4a574;
+  background: white;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-family: 'LXGW WenKai', cursive;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #5a3e1b;
+}
+
+.preset-btn:hover {
+  background: #8b4513;
+  color: white;
+  border-color: #8b4513;
+  transform: scale(1.1);
+}
+
+.control-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.control-row .control-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.control-group select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #d4a574;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+}
+
+.control-group.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.control-group.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-clear {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-clear:hover {
+  background: #5a6268;
+}
+
+.btn-print {
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  color: white;
+}
+
+.btn-print:hover {
+  background: linear-gradient(135deg, #a0522d 0%, #8b4513 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+/* 练习区域 */
+.practice-area {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  min-height: 400px;
+}
+
+.practice-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.grid-line {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+.practice-cell {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border: 2px solid #8b4513;
+  background: white;
+  overflow: hidden;
+}
+
+.practice-cell.sample {
+  background: rgba(139, 69, 19, 0.03);
+}
+
+.cell-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.sample-char {
+  font-size: 4rem;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 田字格 */
+.grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.horizontal-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(139, 69, 19, 0.2);
+  transform: translateY(-50%);
+}
+
+.vertical-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: rgba(139, 69, 19, 0.2);
+  transform: translateX(-50%);
+}
+
+/* 米字格 */
+.diagonal-line-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 141.42%;
+  height: 1px;
+  background: rgba(139, 69, 19, 0.2);
+  transform-origin: top left;
+  transform: rotate(45deg);
+}
+
+.diagonal-line-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 141.42%;
+  height: 1px;
+  background: rgba(139, 69, 19, 0.2);
+  transform-origin: top right;
+  transform: rotate(-45deg);
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 0;
+  color: #666;
+  font-style: italic;
+  border-top: 1px solid #e8d5b7;
+}
+
+/* 打印样式 */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .app {
+    padding: 0;
+  }
+
+  .practice-area {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .grid-container {
+    gap: 10px;
+  }
+
+  .practice-cell {
+    border: 2px solid #000;
+    page-break-inside: avoid;
+  }
+
+  .sample-char {
+    color: #000;
+    opacity: 0.3;
+  }
+
+  .horizontal-line,
+  .vertical-line,
+  .diagonal-line-1,
+  .diagonal-line-2 {
+    background: rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .controls {
+    padding: 15px;
+  }
+
+  .control-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .practice-lines {
+    gap: 15px;
+  }
+
+  .grid-line {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+  }
+
+  .sample-char {
+    font-size: 3rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .practice-lines {
+    gap: 12px;
+  }
+
+  .grid-line {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 8px;
+  }
+
+  .sample-char {
+    font-size: 2.5rem;
+  }
+
+  .preset-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+}
