@@ -11,6 +11,13 @@ const fontOptions = [
   { id: 'kuaile', name: '站酷快乐体', family: 'ZCOOL KuaiLe', style: '活泼可爱' },
   { id: 'longcang', name: '龙藏体', family: 'Long Cang', style: '可爱手写' },
   { id: 'zhimang', name: '芝忙行', family: 'Zhi Mang Xing', style: '趣味手写' },
+  { id: 'huangyou', name: '站酷庆科黄油体', family: 'ZCOOL QingKe HuangYou', style: '圆润可爱' },
+  { id: 'mashanzheng', name: '马山正', family: 'Ma Shan Zheng', style: '圆润手写' },
+  { id: 'liujianmaocao', name: '柳建毛草', family: 'Liu Jian Mao Cao', style: '圆润草书' },
+  { id: 'zenmaru', name: 'Zen圆体', family: 'Zen Maru Gothic', style: '柔软优雅' },
+  { id: 'yuseimagic', name: 'Yusei魔法体', family: 'Yusei Magic', style: '俏皮POP' },
+  { id: 'klee', name: 'Klee手写体', family: 'Klee One', style: '亲切硬笔' },
+  { id: 'huninn', name: '粉圆体', family: 'Huninn', style: '圆润甜美' },
 ]
 
 // 常用汉字预设
